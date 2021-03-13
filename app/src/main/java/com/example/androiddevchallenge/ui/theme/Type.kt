@@ -17,27 +17,63 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
+
+val Kulim = FontFamily(
+    Font(R.font.kulimpark_regular),
+    Font(R.font.kulimpark_italic, style = FontStyle.Italic),
+    Font(R.font.kulimpark_light, FontWeight.Light),
+    Font(R.font.kulimpark_lightitalic, FontWeight.Light, FontStyle.Italic),
+    Font(R.font.kulimpark_bold, FontWeight.Bold),
+    Font(R.font.kulimpark_bolditalic, FontWeight.Bold, FontStyle.Italic),
+)
+
+val Lato = FontFamily(
+    Font(R.font.lato_regular),
+    Font(R.font.lato_italic, style = FontStyle.Italic),
+    Font(R.font.lato_bold, FontWeight.Bold),
+    Font(R.font.lato_bolditalic, FontWeight.Bold, FontStyle.Italic),
+)
 
 // Set of Material typography styles to start with
 val typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
+    h1 = TextStyle(
+        fontFamily = Kulim,
+        fontWeight = FontWeight.Light,
+        fontSize = 28.sp,
+        letterSpacing = 1.15f.sp
+    ),
+    h2 = TextStyle(
+        fontFamily = Kulim,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
-        /* Other default text styles to override
-    button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
+        fontSize = 15.sp,
+        letterSpacing = 1.15f.sp
+    ),
+    h3 = TextStyle(
+        fontFamily = Kulim,
+        fontWeight = FontWeight.Bold,
         fontSize = 14.sp
     ),
-    caption = TextStyle(
-        fontFamily = FontFamily.Default,
+    body1 = TextStyle(
+        fontFamily = Lato,
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
+        fontSize = 14.sp
+    ),
+    button = TextStyle(
+        fontFamily = Lato,
+        fontWeight = FontWeight.Bold,
+        fontSize = 14.sp,
+        letterSpacing = 1.15f.sp
+    ),
+    caption = TextStyle(
+        fontFamily = Kulim,
+        fontWeight = FontWeight.Normal,
+        fontSize = 12.sp,
+        letterSpacing = 1.15f.sp
     )
-    */
 )
